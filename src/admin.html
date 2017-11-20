@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
+
 <body>
   <nav class="navbar navbar-dark bg-dark fixed-top">
+
+    <select class="form-control" style="width:300px;">
+        <option value="one">Attendee</option>
+        <option value="two">Projects</option>
+    </select>
+
     <a class="navbar-brand" href="#">CP-Admin</a>
-    <button class="btn btn-outline-danger float-right" type="submit">Log Out</button>
+    <button class="btn btn-outline-info float-right" type="submit">Log Out</button>
   </nav>
 
   <main role="main" class="mt-5 pt-5 container">
     <table id="adminTable" class="display" width="100%"></table>
   </main>
+
+  <div class="footer bg-secondary text-white">
+    <div class="container text-center">
+      <button class="btn btn-outline-info">Generate Seating Plan</button>
+      <button class="btn btn-outline-info">Generate Lanyards</button>
+      <button class="btn btn-outline-info">Download CSV</button>
+    </div>
+  </div>
 
   <script src="admin.js"></script>
   <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
